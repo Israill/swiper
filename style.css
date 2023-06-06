@@ -38,7 +38,7 @@ button {
     border-top: 3px solid rgba(217, 255, 245, 1);
     width: 320px;
     padding-bottom: 15px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: #F8F8F8;
   }
 
   .header {
@@ -74,6 +74,10 @@ button {
 
   .swiper-slide img {
   }
+  .button-next {
+    cursor: pointer;
+  }
+
   .swiper-pagination {
     --swiper-pagination-bullet-size: 12px;
   }
