@@ -38,9 +38,8 @@ function handleTabletChange(e) {
 
 window.onload = function () {
   let gridSlide = document.getElementsByClassName("swiper-slide-grid-wrapper");
-  console.log(gridSlide);
+  console.log(gridSlide.length + "one");
   let btn = document.getElementById("button");
-  console.log(btn);
   for (let i = 6; i < gridSlide.length; i++) {
     gridSlide[i].style.display = "none";
   }
@@ -48,12 +47,25 @@ window.onload = function () {
   let countCard = 6;
   btn.addEventListener("click", function () {
     let box = document.getElementsByClassName("swiper-slide-grid-wrapper");
-    countCard = box.length;
-    if (countCard <= box.length) {
+    console.log(box.length + "two");
+    let img;
+    let imgSrc;
+    if (countCard < box.length) {
+      countCard = 8;
+      img = document.getElementById("button-img");
+      img.setAttribute("src", "/img/iconup.svg");
       for (let i = 0; i < countCard; i++) {
-        console.log("rwqeklfdeqlknmd");
         box[i].style.display = "block";
+        console.log(box.length + "three");
       }
+    } else {
+      for (let i = 6; i < box.length; i++) {
+        box[i].style.display = "none";
+        console.log(box.length + "four");
+      }
+      countCard = 6;
+      img = document.getElementById("button-img");
+      img.setAttribute("src", "/img/icondown.svg");
     }
   });
 };

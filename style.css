@@ -122,6 +122,13 @@ button {
   }
   #button {
     display: block;
+    display: flex;
+    align-items: center;
+    gap: 17px;
     margin: 24px 0 0 24px;
+    font-family: "TT Lakes Medium";
+    font-size: 16px;
+  }
+  #button img {
   }
 }
