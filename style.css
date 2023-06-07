@@ -17,7 +17,6 @@
   font-style: normal;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +27,6 @@ button {
   border: none;
 }
 
-
 @media (min-width: 320px) {
   body {
     display: flex;
@@ -38,7 +36,7 @@ button {
     border-top: 3px solid rgba(217, 255, 245, 1);
     width: 320px;
     padding-bottom: 15px;
-    background: #F8F8F8;
+    background: #f8f8f8;
   }
 
   .header {
@@ -57,6 +55,9 @@ button {
   .swiper {
     padding-left: 16px;
   }
+  .swiper-grid {
+    display: none;
+  }
   .swiper-wrapper {
     display: flex;
     padding: 0 0 40px 0;
@@ -66,10 +67,11 @@ button {
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;
+    width: 224px;
     height: 72px;
     background-color: white;
     border-radius: 6px;
-    border: 1px solid rgba(234, 234, 234, 1)
+    border: 1px solid rgba(234, 234, 234, 1);
   }
 
   .swiper-slide img {
@@ -81,11 +83,45 @@ button {
   .swiper-pagination {
     --swiper-pagination-bullet-size: 12px;
   }
-  
+
   .swiper-button-prev {
   }
   .swiper-button-next {
   }
   .swiper-scrollbar {
+  }
+  #button {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 768px;
+  }
+  .swiper-wrapper {
+    display: none;
+  }
+  .swiper-grid {
+    display: block;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    row-gap: 16px;
+    margin-left: 1.5%;
+  }
+  .swiper-slide-grid {
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    width: 224px;
+    height: 72px;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid rgba(234, 234, 234, 1);
+  }
+  #button {
+    display: block;
+    margin: 24px 0 0 24px;
   }
 }
