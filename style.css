@@ -120,6 +120,9 @@ button {
     border-radius: 6px;
     border: 1px solid rgba(234, 234, 234, 1);
   }
+  .swiper-slide-grid-wrapper_dt {
+  }
+
   #button {
     display: block;
     display: flex;
@@ -128,7 +131,22 @@ button {
     margin: 24px 0 0 24px;
     font-family: "TT Lakes Medium";
     font-size: 16px;
+    
   }
   #button img {
+  }
+}
+
+@media (min-width: 1120px) {
+  .wrapper {
+    width: 1120px;
+  }
+  .swiper-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    row-gap: 16px;
+    margin-left: 1.5%;
+  }
+  .swiper-slide-grid-wrapper_dt {
   }
 }
