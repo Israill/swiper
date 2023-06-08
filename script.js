@@ -24,20 +24,14 @@ const swiper = new Swiper(".swiper", {
 });
 
 // Создаем медиа условие, проверяющее viewports на ширину не менее 768 пикселей.
-// const mediaQuery = window.matchMedia("(min-width: 1120px)");
-// function handleTabletChange(e) {
-//   console.log(1);
-//   if (e.matches) {
-//     swiper = new Swiper(".swiper", {});
-//   }
-// }
-window.addEventListener("resize", () => {
-  if (window.screen.availWidth > 1120) {
+const mediaQuery = window.matchMedia("(min-width: 1120px)");
+function handleTabletChange(e) {
+  if (e.matches) {
     let gridSlide = document.getElementsByClassName(
       "swiper-slide-grid-wrapper"
     );
     let btn = document.getElementById("button");
-    btn.removeAttribute("disabled")
+    btn.removeAttribute("disabled");
     for (let i = 8; i < gridSlide.length; i++) {
       gridSlide[i].style.display = "none";
     }
@@ -66,19 +60,20 @@ window.addEventListener("resize", () => {
         img.setAttribute("src", "/img/icondown.svg");
       }
     });
-  }
-  if (window.screen.availWidth < 1120) {
+  } else {
     let gridSlide = document.getElementsByClassName(
       "swiper-slide-grid-wrapper"
     );
     let btn = document.getElementById("button");
-    btn.setAttribute("disabled", true)
+    btn.setAttribute("disabled", true);
 
     for (let i = 6; i < gridSlide.length; i++) {
       gridSlide[i].style.display = "none";
     }
   }
-});
+}
+mediaQuery.addListener(handleTabletChange);
+handleTabletChange(mediaQuery);
 
 // mediaQuery.addListener(handleTabletChange)
 // handleTabletChange(mediaQuery)
