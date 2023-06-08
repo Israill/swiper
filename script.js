@@ -23,7 +23,6 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// Создаем медиа условие, проверяющее viewports на ширину не менее 768 пикселей.
 const mediaQuery = window.matchMedia("(min-width: 1120px)");
 function handleTabletChange(e) {
   if (e.matches) {
