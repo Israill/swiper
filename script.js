@@ -33,11 +33,9 @@ const swiper = new Swiper(".swiper", {
 // }
 window.addEventListener("resize", () => {
   if (window.screen.availWidth > 1120) {
-    console.log(11111);
     let gridSlide = document.getElementsByClassName(
       "swiper-slide-grid-wrapper"
     );
-    console.log(gridSlide.length + "one");
     let btn = document.getElementById("button");
     btn.removeAttribute("disabled")
     for (let i = 8; i < gridSlide.length; i++) {
@@ -70,7 +68,6 @@ window.addEventListener("resize", () => {
     });
   }
   if (window.screen.availWidth < 1120) {
-    console.log(22222);
     let gridSlide = document.getElementsByClassName(
       "swiper-slide-grid-wrapper"
     );
