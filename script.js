@@ -40,12 +40,14 @@ function handleTabletChange(e) {
 
     let countCard = 6;
     btn.addEventListener("click", function () {
+      let btnText = document.getElementById("button-text").textContent;
+      let img;
+      console.log(btnText);
       let box = document.getElementsByClassName("swiper-slide-grid-wrapper");
       document.getElementById("button-text").textContent =
         document.getElementById("button-text").textContent == "Показать все"
           ? "Скрыть"
           : "Показать все";
-      let img;
 
       if (countCard < box.length) {
         countCard = 11;
@@ -64,7 +66,7 @@ function handleTabletChange(e) {
       }
     });
   } else {
-    document.getElementById("button-text").textContent = "Показать все"
+    document.getElementById("button-text").textContent = "Показать все";
     let gridSlide = document.getElementsByClassName(
       "swiper-slide-grid-wrapper"
     );
