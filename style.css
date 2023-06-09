@@ -42,7 +42,7 @@ button {
   .header {
     padding: 16px;
     margin-bottom: 16px;
-    background-color: white;
+    background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
   }
   .header__title {
     font-family: "TT Lakes Regular";
