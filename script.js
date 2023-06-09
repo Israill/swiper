@@ -41,6 +41,10 @@ function handleTabletChange(e) {
     let countCard = 6;
     btn.addEventListener("click", function () {
       let box = document.getElementsByClassName("swiper-slide-grid-wrapper");
+      document.getElementById("button-text").textContent =
+        document.getElementById("button-text").textContent == "Показать все"
+          ? "Скрыть"
+          : "Показать все";
       let img;
 
       if (countCard < box.length) {

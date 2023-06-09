@@ -132,7 +132,7 @@ button {
     font-family: "TT Lakes Medium";
     font-size: 16px;
   }
-  #button img {
+  #button:active {
   }
 }
 
