@@ -64,6 +64,7 @@ function handleTabletChange(e) {
       }
     });
   } else {
+    document.getElementById("button-text").textContent = "Показать все"
     let gridSlide = document.getElementsByClassName(
       "swiper-slide-grid-wrapper"
     );
